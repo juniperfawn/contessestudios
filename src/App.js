@@ -8,7 +8,7 @@ import BlueStar from "./assets/star-blue.svg";
 import PinkStar from "./assets/star-pink.svg";
 import OrangeStar from "./assets/star-orange.svg";
 import { motion } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 // useEffect(() => {
 //   const scrollers = document.querySelectorAll(".scroller");
