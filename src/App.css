@@ -1,38 +1,190 @@
 .App {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::selection {
+  color: #5b9fed;
+  background-color: #f0d4f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.left {
+  background-color: black;
   color: white;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
+.logo {
+  width: 80px;
+  padding: 20px;
+}
+
+.name {
+  width: 2000px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.star {
+  width: 35px;
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+.stars {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.star__bottom {
+  width: 35px;
+  animation: spin 12s linear infinite;
+}
+
+.title {
+  font-family: "Abril Fatface Regular";
+}
+
+.left p {
+  font-size: 12px;
+}
+
+.left__content {
+  padding: 80px;
+  padding-top: 20px;
+}
+
+.left h3 {
+  font-size: 12px;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.right h2 {
+  font-size: 12px;
+  padding: 10px;
+  font-family: "Arial Black";
+  pointer-events: none;
+}
+
+.design {
+  background-color: #eecb4b;
+}
+
+/* .design:hover {
+  background-color: #aa8f39;
+} */
+
+.design p {
+  color: #aa8f39;
+  font-size: 150px;
+  text-align: center;
+  font-family: "Academy Engraved LET Plain:1.0";
+  pointer-events: none;
+}
+
+.development {
+  background-color: #e37045;
+}
+
+/* .development:hover {
+  background-color: #c15c3d;
+} */
+
+.development img {
+  /* background-color: red; */
+}
+
+.photography {
+  background-color: #f0d4f1;
+}
+
+.photography::selection {
+  background-color: #5b9fed;
+  color: #f0d4f1;
+}
+
+.photography img {
+  /* background-color: red; */
+}
+
+.mediaConsultancy {
+  background-color: #5b9fed;
+}
+
+.mediaConsultancy p {
+  color: #4e8ac4;
+  font-size: 150px;
+  text-align: center;
+  font-family: "Academy Engraved LET Plain:1.0";
+  pointer-events: none;
+}
+/* 
+.development {
+  background-image: linear-gradient(45deg, blue 50%, lightblue 50%);
+  background-size: 250% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease;
+}
+
+div:hover {
+  background-position: left top;
+} */
+
+.contact__button {
+  /* background-color: black; */
+  font-family: "Abril Fatface Regular";
+  font-weight: 900;
+  background: none;
+  color: inherit;
+  /* padding: 10px 30px 10px 30px; */
+  cursor: pointer;
+  outline: inherit;
+  border: none;
+}
+
+button:hover {
+  color: #5b9fed;
+}
+
+.scroller {
+  max-width: 600px;
+  outline: 1px solid lime;
+  /* overflow: hidden; */
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+}
+
+.scroller[data-animated="true"] .scoller__inner {
+  flex-wrap: nowrap;
+}
+
+.scoller__inner {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }

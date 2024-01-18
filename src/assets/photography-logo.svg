@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C3B1C4;}
+	.st1{clip-path:url(#SVGID_00000055676032764498352390000007062654840662259845_);fill:#C3B1C4;}
+</style>
+<circle class="st0" cx="291.64" cy="322.85" r="174.15"/>
+<g>
+	<defs>
+		
+			<rect id="SVGID_1_" x="-132.63" y="2.21" transform="matrix(-0.8593 0.5115 -0.5115 -0.8593 319.4108 116.8785)" width="552.52" height="200.33"/>
+	</defs>
+	<clipPath id="SVGID_00000035490379103300881450000007882997142284672932_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	
+		<circle style="clip-path:url(#SVGID_00000035490379103300881450000007882997142284672932_);fill:#C3B1C4;" cx="213.68" cy="177.16" r="175.74"/>
+</g>
+</svg>
