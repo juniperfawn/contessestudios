@@ -78,15 +78,19 @@ function App() {
             <p>D</p>
           </motion.div>
         </div>
-        <motion.div className="development" ref={constraintsRef}>
+        {/* <motion.div className="development" ref={constraintsRef}>
           <h2>WEB DEVELOPMENT</h2>
           <motion.div drag dragConstraints={constraintsRef}>
             <img src={Development} alt="" />
           </motion.div>
-        </motion.div>
-        <div className="photography" ref={constraintsRef}>
+        </motion.div> */}
+        <div className="development" ref={constraintsRef}>
+          <h2>WEB DEVELOPMENT</h2>
+          <img src={Development} alt="" />
+        </div>
+        <div className="photography">
           <h2>PHOTOGRAPHY</h2>
-          <img src={Photography} alt="" drag dragConstraints={constraintsRef} />
+          <img src={Photography} alt="" />
         </div>
         <div className="mediaConsultancy">
           <h2>MEDIA CONSULTANCY</h2>

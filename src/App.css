@@ -171,7 +171,7 @@ button:hover {
 
 .scroller {
   max-width: 600px;
-  outline: 1px solid lime;
+  /* outline: 1px solid lime; */
   /* overflow: hidden; */
 }
 
