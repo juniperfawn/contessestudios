@@ -19,6 +19,18 @@ import { useRef } from "react";
 //   }
 // }, []);
 
+const scrollers = document.querySelectorAll(".scroller");
+
+if (!window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    scroller.setAttribute("data-animated", true);
+  });
+}
+
 function App() {
   const constraintsRef = useRef(null);
   return (
@@ -26,13 +38,28 @@ function App() {
       <div className="left">
         <img src={Logo} alt="" className="logo" />
         <div className="left__content">
-          <div className="flex">
-            <h3>CREATE YOUR VISION</h3>
-            <img src={YellowStar} alt="" className="star" />
+          <div className="flexWrapper">
+            <div className="flex">
+              <h3>CREATE YOUR VISION</h3>
+              <img src={YellowStar} alt="" className="star" />
+            </div>
           </div>
           {/* <h1 className="title">CONTESSE STUDIOS</h1> */}
-          <div className="scroller">
+          {/* <div className="scroller" data-animated="true">
             <img src={Name} alt="" className="name scroller__inner" />
+          </div> */}
+          <div className="scroller" data-animated="true">
+            <ul className="scroller__inner">
+              <li>
+                <img src={Name} alt="" className="name" />
+              </li>
+              <li>
+                <img src={Name} alt="" className="name" />
+              </li>
+              <li>
+                <img src={Name} alt="" className="name" />
+              </li>
+            </ul>
           </div>
           {/* <img src={Name} alt="" className="name" /> */}
           <p>
@@ -65,9 +92,24 @@ function App() {
         </div>
       </div>
       <div className="right">
-        <div className="design">
-          <h2>DESIGN</h2>
-          <motion.div
+        <div className="serviceWrapper">
+          <h2 className="serviceTitleMobile designTitle">DESIGN</h2>
+          <div className="design service">
+            <h2 className="serviceTitle">DESIGN</h2>
+            <div className="serviceGraphic">
+              <motion.div
+                whileHover={{ scale: 1.2, rotate: 180 }}
+                whileTap={{
+                  scale: 0.8,
+                  rotate: -90,
+                  borderRadius: "100%",
+                }}
+              >
+                <p>D</p>
+              </motion.div>
+            </div>
+          </div>
+          {/* <motion.div
             whileHover={{ scale: 1.2, rotate: 180 }}
             whileTap={{
               scale: 0.8,
@@ -76,7 +118,7 @@ function App() {
             }}
           >
             <p>D</p>
-          </motion.div>
+          </motion.div> */}
         </div>
         {/* <motion.div className="development" ref={constraintsRef}>
           <h2>WEB DEVELOPMENT</h2>
@@ -84,17 +126,52 @@ function App() {
             <img src={Development} alt="" />
           </motion.div>
         </motion.div> */}
-        <div className="development" ref={constraintsRef}>
-          <h2>WEB DEVELOPMENT</h2>
-          <img src={Development} alt="" />
+        <div className="serviceWrapper">
+          <h2 className="serviceTitleMobile developmentTitle">
+            WEB DEVELOPMENT
+          </h2>
+          <div className="development service" ref={constraintsRef}>
+            <h2 className="serviceTitle">WEB DEVELOPMENT</h2>
+            <div className="serviceGraphic">
+              <img src={Development} alt="" />
+              <p className="showOnMobile">D</p>
+            </div>
+            {/* <img src={Development} alt="" />
+          <p className="showOnMobile">D</p> */}
+          </div>
         </div>
-        <div className="photography">
-          <h2>PHOTOGRAPHY</h2>
-          <img src={Photography} alt="" />
+        <div className="serviceWrapper">
+          <h2 className="serviceTitleMobile photographyTitle">PHOTOGRAPHY</h2>
+          <div className="photography service">
+            <h2 className="serviceTitle">PHOTOGRAPHY</h2>
+            <div className="serviceGraphic">
+              <img src={Photography} alt="" />
+              <p className="showOnMobile">P</p>
+            </div>
+            {/* <img src={Photography} alt="" />
+          <p className="showOnMobile">P</p> */}
+          </div>
         </div>
-        <div className="mediaConsultancy">
-          <h2>MEDIA CONSULTANCY</h2>
-          <motion.div
+        <div className="serviceWrapper">
+          <h2 className="serviceTitleMobile mediaConsultantcyTitle">
+            MEDIA CONSULTANCY
+          </h2>
+          <div className="mediaConsultancy service">
+            <h2 className="serviceTitle">MEDIA CONSULTANCY</h2>
+            <div className="serviceGraphic">
+              <motion.div
+                whileHover={{ scale: 1.2, rotate: 180 }}
+                whileTap={{
+                  scale: 0.8,
+                  rotate: -90,
+                  borderRadius: "100%",
+                }}
+              >
+                <p>M</p>
+              </motion.div>
+            </div>
+          </div>
+          {/* <motion.div
             whileHover={{ scale: 1.2, rotate: 180 }}
             whileTap={{
               scale: 0.8,
@@ -103,7 +180,7 @@ function App() {
             }}
           >
             <p>M</p>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </div>
